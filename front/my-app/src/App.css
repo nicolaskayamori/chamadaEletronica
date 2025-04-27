@@ -1,0 +1,14 @@
+#root {
+  max-width: 100%;
+  padding: 2rem;
+
+}
+
+
+.titulo {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 20%; /* Ocupa toda a altura da viewport (opcional) */
+}

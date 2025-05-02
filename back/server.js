@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const databaseConfig = require('./config/db.js');
+const classRoutes = require('./routes/classRoutes.js')
+const attendanceRoutes = require('./routes/attendanceRoutes.js')
 require('module-alias/register');
 require('dotenv/config');
 
@@ -12,6 +14,14 @@ server.use(cors());
 server.get('/', function (req, res) {
     return res.json({ message: "API conectada" });
 })
+
+server.use('/api/classes', classRoutes);
+
+server.use('/history', attendanceRoutes);
+
+server.use((req, res) => {
+    res.status(404).json({ error: "Rota não encontrada" });
+});
 
 databaseConfig();
 

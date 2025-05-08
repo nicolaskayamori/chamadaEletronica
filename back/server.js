@@ -15,9 +15,7 @@ server.get('/', function (req, res) {
     return res.json({ message: "API conectada" });
 })
 
-server.use('/api/classes', classRoutes);
-
-server.use('/history', attendanceRoutes);
+server.use(classRoutes, attendanceRoutes);
 
 server.use((req, res) => {
     res.status(404).json({ error: "Rota não encontrada" });

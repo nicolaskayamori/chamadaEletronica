@@ -22,14 +22,13 @@ function QRCodeScanner() {
   const handleError = (err) => {
     console.error(err);
     setMessage('Erro ao ler QR code');
-  };
+  };  
 
   return (
     <div>
       <h2>Registrar Presença</h2>
       <QrReader
-        onError={handleError}
-        onScan={handleScan}
+        value=''
         style={{ width: '100%' }}
       />
       <p>Resultado: {result}</p>

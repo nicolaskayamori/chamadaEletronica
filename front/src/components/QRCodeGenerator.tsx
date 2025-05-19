@@ -9,8 +9,7 @@ function QRCodeGenerator() {
 
   const generateQRCode = async () => {
     try {
-      const response = await axios.post('http://localhost:4444/api/classes', { subject });
-      setQrCodeData(response.data.class.qrCodeData);
+      setQrCodeData(subject);
     } catch (error) {
       console.error('Error generating QR code:', error);
     }

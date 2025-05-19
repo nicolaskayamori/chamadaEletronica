@@ -1,6 +1,6 @@
 import React from 'react';
 import QRCodeGenerator from './QRCodeGenerator';
-
+import QRCodeScanner from './QRCodeScanner';
 
 function QrCode({ mode, userType }) {
     return (
